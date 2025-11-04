@@ -1,0 +1,348 @@
+/* বেসিক রিসেট */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f9;
+    color: #333;
+    scroll-behavior: smooth;
+}
+
+/* কমন স্টাইলস */
+.container {
+    width: 85%;
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+h1, h2, h3 {
+    color: #007bff;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+/* হেডার ও নেভিগেশন */
+header {
+    background: #007bff;
+    color: white;
+    padding: 15px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #f4f4f9;
+}
+
+.nav-social-link {
+    margin-left: 15px;
+    font-size: 1.2em;
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.8em;
+    cursor: pointer;
+}
+
+/* হিরো সেকশন */
+.hero {
+    background: #e9f0ff;
+    padding: 80px 5%;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.hero h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    color: #004085;
+}
+
+.hero h2 {
+    font-size: 1.5em;
+    font-weight: normal;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.btn {
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin: 5px;
+    display: inline-block;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.primary-btn {
+    background-color: #007bff;
+    color: white;
+    border: 2px solid #007bff;
+}
+
+.primary-btn:hover {
+    background-color: #0056b3;
+}
+
+.secondary-btn {
+    background-color: transparent;
+    color: #007bff;
+    border: 2px solid #007bff;
+}
+
+.secondary-btn:hover {
+    background-color: #007bff;
+    color: white;
+}
+
+/* ব্যানার ইমেজের জন্য নতুন স্টাইল */
+.hero-banner-image {
+    max-width: 100%;
+    margin-top: 20px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.hero-banner-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* অ্যাবাউট ও কন্টাক্ট সেকশন */
+.about-grid {
+    text-align: center;
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+/* কন্টাক্ট সেকশন স্টাইল: নতুন ফর্ম এবং সোশ্যাল লিংক */
+.contact-info {
+    text-align: center;
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+    width: 100%;
+}
+
+.contact-form textarea {
+    resize: vertical;
+}
+
+.contact-form button[type="submit"] {
+    align-self: center;
+    width: 50%;
+}
+
+.email-link {
+    font-size: 1.1em;
+    margin-bottom: 20px;
+}
+
+/* সোশ্যাল লিঙ্ক স্টাইল - কন্টাক্ট সেকশনে */
+.contact-social-links a {
+    color: #007bff;
+    font-size: 2.2em; /* আইকন বড় হবে */
+    margin: 0 15px;
+    transition: color 0.3s;
+    display: inline-block;
+}
+
+.contact-social-links a:hover {
+    color: #0056b3;
+}
+
+
+/* দক্ষতা সেকশন */
+.skills-grid {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.skill-item {
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 5px;
+    flex: 1;
+    min-width: 250px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.skill-item h4 {
+    color: #333;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+.skill-item ul {
+    list-style: none;
+    text-align: left;
+}
+
+.skill-item li {
+    padding: 5px 0;
+}
+
+/* প্রজেক্টস সেকশন */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    margin-top: 20px;
+}
+
+.project-card {
+    background: #fff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 5px;
+    transition: transform 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.project-card .project-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.project-links a {
+    margin-right: 15px;
+    color: #007bff;
+}
+
+/* ফুটার */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #333;
+    color: white;
+    margin-top: 20px;
+}
+
+/* ফুটারের সোশ্যাল লিঙ্ক স্টাইল */
+.social-links {
+    margin: 20px 0 10px;
+}
+
+.social-links a {
+    color: white;
+    font-size: 1.5em;
+    margin: 0 10px;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: #007bff;
+}
+
+
+/* মিডিয়া কোয়েরি - রেসপনসিভনেস */
+@media (max-width: 768px) {
+    /* নেভিগেশন */
+    nav {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background: #007bff;
+        padding-bottom: 10px;
+        box-shadow: 0 4px 5px rgba(0,0,0,0.1);
+    }
+
+    nav.active {
+        display: flex;
+    }
+
+    nav a {
+        margin: 10px 0;
+        text-align: center;
+        padding: 8px 0;
+        border-top: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+    
+    .hero {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+    .hero h1 {
+        font-size: 2em;
+    }
+
+    .hero h2 {
+        font-size: 1.2em;
+    }
+
+    /* কন্টাক্ট ফর্ম বাটন */
+    .contact-form button[type="submit"] {
+        width: 100%;
+    }
+}
